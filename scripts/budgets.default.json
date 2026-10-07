@@ -1,0 +1,19 @@
+{
+  "lcp_ms": 2500,
+  "inp_ms": 200,
+  "cls": 0.1,
+  "ttfb_ms": 800,
+  "js_initial_gzip_kb": 170,
+  "js_route_chunk_gzip_kb": 50,
+  "css_initial_gzip_kb": 60,
+  "image_max_kb": 200,
+  "dom_nodes_warn": 1500,
+  "dom_nodes_fail": 3000,
+  "font_families_max": 2,
+  "font_weights_max": 4,
+  "third_party_scripts_max": 5,
+  "min_target_px": 24,
+  "recommended_target_px": 44,
+  "contrast_text": 4.5,
+  "contrast_large_and_ui": 3
+}
