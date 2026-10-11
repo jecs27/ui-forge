@@ -17,6 +17,12 @@ and rushed UIs. Each lists why it's bad and what to propose instead.
 | 9 | Infinite spinners, no timeout, no error path | Dead UI is a data-loss moment on real networks | Timeout copy + retry; skeleton for shapes |
 | 10 | Automatic carousel hiding key content | Content behind a timer = content hidden from slow readers; gesture discovery fails | Pause on hover/interaction; static stack or manual nav |
 | 11 | Reflex optimization: `memo`/`lazy` in every PR | Bureaucracy-sized diffs that complicate the render graph and typically buy nothing measurable | Optimize only a measured hot path |
+| 12 | Purple/blue gradient as the default palette, gradient text | Brand-templated; hides hierarchy behind decoration | Color from existing tokens or content need; flat accent with contrast step |
+| 13 | Identical card grids / nested cards as the only structure | Every item reads equal weight; no scan path | Vary card roles or switch to table/split/list per content |
+| 14 | Center-everything layout with no visual hierarchy | No focal point; squint test shows noise | One focal point left/top per reading direction; supporting content muted |
+| 15 | Kicker or icon-tile stack above every heading | Decorative prefix competes with the headline | Heading first; icon only when it disambiguates |
+| 16 | Hero metric row ("10k+ users") / generic testimonials / split-hero template | Unverifiable claims; layout answers every brief the same way | Outcome headline + one action; proof only with source |
+| 17 | Generic "Get Started / Learn More" CTAs, emoji as decoration, glowing edges / pulsing dots | Vague action; noise that fails contrast and motion rules | Verb + object CTA; status via text + color, motion gated by reduced-motion |
 
 ## Rules for the skill itself
 

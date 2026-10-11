@@ -1,0 +1,13 @@
+{
+  "name": "ui-forge",
+  "version": "0.1.0",
+  "description": "Audit, score and fix UIs for performance, accessibility and visual quality. Diagnose, score, fix, verify — read-only until you approve.",
+  "author": {
+    "name": "jecs27",
+    "url": "https://github.com/jecs27"
+  },
+  "homepage": "https://github.com/jecs27/ui-forge",
+  "repository": "https://github.com/jecs27/ui-forge",
+  "license": "MIT",
+  "keywords": ["ui", "audit", "accessibility", "performance", "design-review"]
+}

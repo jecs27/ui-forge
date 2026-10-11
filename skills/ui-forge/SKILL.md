@@ -114,6 +114,13 @@ Apply `references/rubric.md`: 0–100 per category and total, every
 deduction carrying `file:line` or a metric, measured vs estimated marked.
 Name the category that limits the score most.
 
+- **Claims need evidence.** A claimed limit ("the API can't", "needs a
+  credential") needs the verbatim error or the static finding that proves
+  it. A checked null result ("ran scanner, nothing material") is a
+  success; an unsupported positive claim is dropped, never scored.
+- **One root cause, one deduction** (see rubric rule 5). Fix where all
+  callers route through, not in each caller.
+
 ### Phase 5 — Prioritized report → **STOP**
 
 Format: `references/report-template.md`. Each finding: ID, category,
@@ -134,6 +141,10 @@ Do not start editing before this answer. Silence is not consent.
 - Verify a clean git tree, or propose `ui-forge/<date>-<scope>` and wait.
 - One finding at a time, minimal diff, clear before/after.
 - Match the project's code style: formatting, naming, file structure.
+- **Reuse ladder — stop at the first rung that holds:**
+  1. A helper, token, or pattern already in this repo.
+  2. The standard library / platform feature (CSS over JS, native input over a picker lib).
+  3. An already-installed dependency. Never add a new one for what a few lines cover.
 - No libraries added for what the platform does.
 - No comments in generated code unless the code is not self-explanatory.
 - No refactor outside the approved scope.
@@ -146,12 +157,17 @@ Do not start editing before this answer. Silence is not consent.
 ### Phase 7 — Verify
 
 - Re-run the scanner and any measurement used before.
-- Compare against `.ui-forge/baseline.json` if it exists.
+- Compare against `.ui-forge/baseline.json` if it exists: report metric
+  deltas per category, not just the new total.
 - Report improvements **and regressions**. If something got worse, say so
   plainly and offer to revert that specific change.
 - Run the project's tests, linter, and typecheck if they exist; report
   the actual result. If a command fails because the tool is missing, say
   that instead of claiming a pass.
+- Optional visual check (only if the user asks or a layout finding was
+  applied): render at 375 / 768 / 1440 px, run the squint test from
+  `references/design/visual-hierarchy.md`, note overflow or collapse with
+  `file:line`. Never install a browser or tool to do this.
 
 ### Phase 8 — Persist (ask first)
 
@@ -178,7 +194,9 @@ Rules:
 ## `explore` mode
 
 Show **3 directions**, chosen from `references/philosophies/` to fit the
-product context. Each direction: at most **4 bullets** — structure,
+product context. Before proposing, ground each direction in the user's
+task: what pain it removes, what the user clicks first, what can be
+scanned in 5 seconds. Each direction: at most **4 bullets** — structure,
 visual treatment, characteristic interaction, "works best when…". Then:
 
 - Declare dials per direction: `variance`, `motion`, `density` (1–10).

@@ -16,15 +16,11 @@ diagnoses and fixes, it does not just hand out style opinions.
 
 ## Install
 
-Copy this folder to your agent's skills directory:
-
 ```bash
-# user-wide
-cp -r ui-forge ~/.config/opencode/skills/
-
-# or per-project
-cp -r ui-forge <repo>/.opencode/skills/
+npx skills add jecs27/ui-forge
 ```
+
+Claude Code, Codex, OpenCode, manual copy: see [INSTALL.md](INSTALL.md).
 
 Then reload your agent. `/ui-forge` is now available.
 
@@ -100,8 +96,9 @@ Everything the skill persists lives in the audited project:
 ## Layout
 
 ```
-SKILL.md              orchestration: modes, phases 0–8, explore, persistence
-references/           knowledge, loaded only when a phase needs it
+skills/ui-forge/
+  SKILL.md            orchestration: modes, phases 0–8, explore, persistence
+  references/         knowledge, loaded only when a phase needs it
   performance/        Core Web Vitals, loading, images, fonts, bundles,
                       rendering, frameworks, animation, third-party
   design/             hierarchy, layout, type, color, states, forms,
@@ -129,10 +126,11 @@ examples/
 
 13 of 14 acceptance scenarios are validated for 0.1.0 (mechanically-tested
 ones ran against a throwaway fixture; behavioral ones are verified by
-construction). The honest per-scenario table is in `CHANGELOG.md`.
+construction). The honest per-scenario table is in
+`skills/ui-forge/CHANGELOG.md`.
 
 ## License
 
 MIT — see `LICENSE`. All prose is original or rewritten for this skill;
 inspired standards (WCAG 2.2, Core Web Vitals) are attributed in
-`PROVENANCE.md`.
+`skills/ui-forge/PROVENANCE.md`.
