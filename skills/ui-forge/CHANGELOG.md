@@ -2,6 +2,16 @@
 
 All notable changes to this skill. Format loosely follows Keep a Changelog.
 
+## [0.1.1] — 2026-10-11
+
+### Added
+- `SKILL.md` phase 4: claims-need-evidence + one-root-cause rule (from gstack review).
+- `SKILL.md` phase 6: 3-rung reuse ladder; phase 7: baseline delta + optional 375/768/1440 squint check (no tooling added).
+- `SKILL.md` explore: ground each direction in user pain / first click / 5-second scan (Platzi #1).
+- `references/anti-patterns.md`: +6 slop entries (gradient default, identical/nested cards, center-everything, kicker stacks, hero metrics, generic CTAs).
+- `references/design/visual-hierarchy.md`: scan patterns F/Z/lawn-mower + RTL logical properties.
+- `references/report-template.md`: per-finding `Usuario:` line (pain removed in one line).
+
 ## [0.1.0] — 2026-10-06
 
 ### Added

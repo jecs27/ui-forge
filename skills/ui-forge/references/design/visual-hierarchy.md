@@ -24,6 +24,19 @@ should match the product goal of the screen, not the sexiest element.
   read as more important; a cluttered top section floods the viewport with
   equal-weight noise.
 
+## Scan patterns and reading direction
+
+- **Design for scanning, not reading.** Users scan in F (text-heavy),
+  Z (sparse landing), or lawn-mower (list/grid) paths before they read.
+  Put the value proposition and primary action on that path; details off it.
+- **Order follows the locale.** Latin scripts read top-down, left-right;
+  RTL locales (Arabic, Hebrew) mirror the path. Never hardcode
+  `left/right` order in a fix — use logical properties (`inline-start`)
+  or the project's RTL setup, and flag an `ml-/mr-` chain as a finding.
+- **Hierarchy check in code:** the first scannable block (hero/header)
+  must hold the H1 + primary action; a nav, badge row, or kicker stack
+  above them pushes the focal point off the scan path.
+
 ## The squint test
 
 Look at the rendered screen, squint until details blur. The thing you can
