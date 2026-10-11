@@ -47,6 +47,7 @@ ID: PERF-004 · P1 · Rendimiento
 Problema: <una línea>
 Evidencia: <archivo:línea o métrica>
 Por qué importa: <efecto en el usuario o la métrica, una línea>
+Usuario: <qué dolor evita o qué tarea desbloquea, una línea>
 Corrección: <diff mínimo, una unidad>
 Verificación: <cómo comprobar que mejoró>
 Riesgo: <bajo/medio/alto + por qué>

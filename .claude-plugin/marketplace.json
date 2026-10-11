@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ui-forge",
+  "description": "Audit, score and fix UIs for performance, accessibility and visual quality.",
+  "owner": {
+    "name": "jecs27",
+    "url": "https://github.com/jecs27"
+  },
+  "plugins": [
+    {
+      "name": "ui-forge",
+      "description": "Senior frontend engineer mode: diagnose, score, fix, verify.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}
