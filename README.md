@@ -16,13 +16,24 @@ diagnoses and fixes, it does not just hand out style opinions.
 
 ## Install
 
-```bash
-npx skills add jecs27/ui-forge
+| Host | Command |
+|---|---|
+| Claude Code | `/plugin marketplace add jecs27/ui-forge` then `/plugin install ui-forge@ui-forge` |
+| OpenCode | `npx skills add jecs27/ui-forge` |
+| Codex | `codex plugin marketplace add jecs27/ui-forge` then `codex plugin add ui-forge@ui-forge` |
+| Any other agent | `npx skills add jecs27/ui-forge` |
+
+Full per-host guide (manual copy, `opencode.json`, uninstall): see [INSTALL.md](INSTALL.md).
+
+Then reload your agent and verify:
+
+```
+/ui-forge audit ./src
 ```
 
-Claude Code, Codex, OpenCode, manual copy: see [INSTALL.md](INSTALL.md).
-
-Then reload your agent. `/ui-forge` is now available.
+You should get a 0–100 scored report that **stops and waits for your
+decision** before changing anything. If it starts editing unprompted,
+it is not running this skill — check the install path.
 
 No dependencies, no setup: the only executable is
 `scripts/scan_static.py`, which uses the Python 3 standard library and
